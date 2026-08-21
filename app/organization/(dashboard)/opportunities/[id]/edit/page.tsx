@@ -55,7 +55,7 @@ export default function EditOpportunityPage({ params }: { params: Promise<{ id: 
       applicationFields: appFields
     });
     
-    router.push(`/company/opportunities/${id}`);
+    router.push(`/organization/opportunities/${id}`);
   };
 
   if (!opportunity) return <div className="p-8">Loading...</div>;

@@ -19,7 +19,7 @@ export default function GenericPitchRedirectPage() {
         <p className="text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
           On SkillForge, direct pitches are submitted directly to specific funding organizations that accept year-round proposals.
         </p>
-        <Link href="/funding-organizations" className="inline-block pt-2">
+        <Link href="/innovator/funding-organizations" className="inline-block pt-2">
           <Button variant="emerald" size="md" rightIcon={<ArrowRight className="w-4 h-4" />}>
             Explore Funding Organizations
           </Button>
@@ -44,7 +44,7 @@ export default function GenericPitchRedirectPage() {
                   <p className="text-xs text-slate-500">{org.orgType} • {org.focusAreas.join(' · ')}</p>
                 </div>
               </div>
-              <Link href={`/funding-organizations/${org.id}/pitch`}>
+              <Link href={`/innovator/funding-organizations`}>
                 <Button variant="primary" size="xs" leftIcon={<Sparkles className="w-3.5 h-3.5 text-amber-300" />}>
                   Pitch Idea
                 </Button>

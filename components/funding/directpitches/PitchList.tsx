@@ -135,7 +135,7 @@ export function PitchList() {
                       </td>
                       <td className="px-5 py-4 text-right">
                         <button
-                          onClick={() => router.push(`/direct-pitches/${pitch.id}`)}
+                          onClick={() => router.push(`/funding/direct-pitches/${pitch.id}`)}
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-surface-200 rounded-lg text-sm font-semibold text-brand-700 hover:bg-brand-50 hover:border-brand-300 transition-smooth"
                         >
                           View Pitch <ArrowUpRight className="w-3.5 h-3.5" />

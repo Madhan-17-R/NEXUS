@@ -91,7 +91,7 @@ export function DirectPitchMonitor() {
                 <img src={pitch.applicantSnapshot.avatar} alt="avatar" className="w-12 h-12 rounded-full border-2 border-white shadow-sm ring-1 ring-surface-200" />
                 <div>
                   <h4 
-                    onClick={() => router.push(`/direct-pitches/${pitch.id}`)}
+                    onClick={() => router.push(`/funding/direct-pitches/${pitch.id}`)}
                     className="text-base font-bold text-surface-900 group-hover:text-brand-600 transition-colors cursor-pointer mb-1"
                   >
                     {pitch.title}
@@ -118,7 +118,7 @@ export function DirectPitchMonitor() {
                 </Badge>
                 
                 <button
-                  onClick={() => router.push(`/direct-pitches/${pitch.id}`)}
+                  onClick={() => router.push(`/funding/direct-pitches/${pitch.id}`)}
                   className="p-2 bg-white border border-surface-200 text-surface-600 rounded-lg hover:bg-brand-50 hover:text-brand-600 hover:border-brand-200 transition-smooth"
                   title="View Pitch"
                 >

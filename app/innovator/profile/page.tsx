@@ -30,7 +30,7 @@ export default function ProfilePage() {
             <div className="relative">
               <Avatar src={profile.avatar} name={profile.name} size="xl" className="border-4 border-white shadow-md" />
               <Link 
-                href="/settings"
+                href="/innovator/settings"
                 className="absolute bottom-0 right-0 w-7 h-7 rounded-full bg-[#0F172A] text-white flex items-center justify-center shadow-md hover:bg-slate-800"
               >
                 <Edit2 className="w-3.5 h-3.5" />
@@ -38,7 +38,7 @@ export default function ProfilePage() {
             </div>
             <div className="flex gap-2">
               <Link 
-                href="/settings"
+                href="/innovator/settings"
                 className="inline-flex items-center justify-center gap-1.5 font-extrabold transition-all px-3.5 py-2 text-xs rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 bg-white"
               >
                 <Edit2 className="w-3.5 h-3.5" />
@@ -159,7 +159,7 @@ export default function ProfilePage() {
       <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
         <h2 className="text-xs font-extrabold uppercase text-slate-400 tracking-wider mb-4 flex items-center justify-between">
           <span>My Pitches & Proposal Submissions</span>
-          <Link href="/funding-organizations" className="text-emerald-700 font-bold hover:underline normal-case text-[11px]">
+          <Link href="/innovator/funding-organizations" className="text-emerald-700 font-bold hover:underline normal-case text-[11px]">
             Explore Organizations →
           </Link>
         </h2>

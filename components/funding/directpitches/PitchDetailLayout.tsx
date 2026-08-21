@@ -387,7 +387,7 @@ export function PitchDetailLayout({ pitchId }: { pitchId: string }) {
       <header className="bg-white border-b border-surface-200 px-6 py-4 flex items-center justify-between shrink-0 z-10">
         <div className="flex items-center gap-4">
           <button
-            onClick={() => router.push(`/direct-pitches`)}
+            onClick={() => router.push(`/funding/direct-pitches`)}
             className="p-2 -ml-2 text-surface-400 hover:text-surface-700 hover:bg-surface-100 rounded-lg transition-smooth shrink-0"
             title="Back to Pitches"
           >

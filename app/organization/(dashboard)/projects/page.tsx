@@ -80,7 +80,7 @@ export default function ProjectsPage() {
                   <span className="flex items-center gap-1.5"><Users className="w-4 h-4" /> {project.teamSize} Members</span>
                 </div>
                 {project.activeOpportunities > 0 && (
-                  <Link href={`/company/opportunities?project=${project.id}`} className="text-xs font-medium text-brand-primary flex items-center gap-1 hover:underline">
+                  <Link href={`/organization/opportunities?project=${project.id}`} className="text-xs font-medium text-brand-primary flex items-center gap-1 hover:underline">
                     {project.activeOpportunities} Active Roles <ArrowRight className="w-3 h-3" />
                   </Link>
                 )}

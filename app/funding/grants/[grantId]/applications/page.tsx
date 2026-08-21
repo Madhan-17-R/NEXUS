@@ -23,7 +23,7 @@ function ApplicationsPageContent({ grantId }: { grantId: string }) {
         <header className="bg-white border border-surface-200 rounded-xl shadow-sm px-6 py-4 flex items-center justify-between shrink-0 mb-6">
           <div className="flex items-center gap-4">
             <button
-              onClick={() => router.push(`/grants`)} // or back to grant detail
+              onClick={() => router.push(`/funding/grants`)} // or back to grant detail
               className="p-2 -ml-2 text-surface-400 hover:text-surface-700 hover:bg-surface-100 rounded-lg transition-smooth shrink-0"
               title="Back to Grants"
             >

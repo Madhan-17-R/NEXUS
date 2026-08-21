@@ -25,7 +25,7 @@ export function DirectPitchSettings() {
   };
 
   const handleCustomize = () => {
-    router.push("/direct-pitches/form");
+    router.push("/funding/direct-pitches/form");
   };
 
   return (

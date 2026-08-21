@@ -26,17 +26,17 @@ interface NavItem {
 }
 
 const MAIN_NAV: NavItem[] = [
-  { id: 'main-feed',     label: 'Main Feed',          href: '/',                    icon: LayoutDashboard },
-  { id: 'company-jobs',  label: 'Company Jobs',        href: '/?tab=company_jobs',    icon: Building2 },
-  { id: 'collaborations',label: 'Innovator Collabs',   href: '/?tab=innovator_posts',  icon: Users },
-  { id: 'applications',  label: 'Applied Jobs',        href: '/applications',        icon: ClipboardList },
-  { id: 'saved',         label: 'Saved Posts',         href: '/saved',               icon: Bookmark },
-  { id: 'messages',      label: 'Messages',            href: '/messages',            icon: MessageSquare, badge: 1 },
-  { id: 'notifications', label: 'Notifications',       href: '/notifications',       icon: Bell,          badge: 2 },
+  { id: 'main-feed',     label: 'Main Feed',          href: '/talent',                          icon: LayoutDashboard },
+  { id: 'company-jobs',  label: 'Company Jobs',        href: '/talent?tab=company_jobs',          icon: Building2 },
+  { id: 'collaborations',label: 'Innovator Collabs',   href: '/talent?tab=innovator_posts',        icon: Users },
+  { id: 'applications',  label: 'Applied Jobs',        href: '/talent/applications',              icon: ClipboardList },
+  { id: 'saved',         label: 'Saved Posts',         href: '/talent/saved',                    icon: Bookmark },
+  { id: 'messages',      label: 'Messages',            href: '/talent/messages',                 icon: MessageSquare, badge: 1 },
+  { id: 'notifications', label: 'Notifications',       href: '/talent/notifications',            icon: Bell,          badge: 2 },
 ];
 
 const BOTTOM_NAV: NavItem[] = [
-  { id: 'settings', label: 'Settings', href: '/settings', icon: Settings },
+  { id: 'settings', label: 'Settings', href: '/talent/settings', icon: Settings },
 ];
 
 interface SidebarProps {
@@ -52,12 +52,12 @@ export default function Sidebar({ open, onClose, collapsed, onToggleCollapse }: 
   const tabParam = searchParams?.get('tab');
 
   function isActive(href: string): boolean {
-    if (href === '/') {
-      return pathname === '/' && !tabParam;
+    if (href === '/talent') {
+      return (pathname === '/talent' || pathname === '/talent/') && !tabParam;
     }
-    if (href.startsWith('/?tab=')) {
+    if (href.startsWith('/talent?tab=')) {
       const targetTab = href.split('=')[1];
-      return pathname === '/' && tabParam === targetTab;
+      return (pathname === '/talent' || pathname === '/talent/') && tabParam === targetTab;
     }
     return pathname.startsWith(href);
   }

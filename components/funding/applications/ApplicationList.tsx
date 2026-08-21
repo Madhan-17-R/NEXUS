@@ -128,7 +128,7 @@ export function ApplicationList() {
                       </td>
                       <td className="px-4 py-4 text-right">
                         <button
-                          onClick={() => router.push(`/grants/${app.grantId}/applications/${app.id}`)}
+                          onClick={() => router.push(`/funding/grants/${app.grantId}/applications/${app.id}`)}
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-surface-200 rounded-lg text-sm font-semibold text-brand-700 hover:bg-brand-50 hover:border-brand-300 transition-smooth"
                         >
                           Review <ArrowUpRight className="w-3.5 h-3.5" />

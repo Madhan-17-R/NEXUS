@@ -37,13 +37,13 @@ export function Sidebar({ open = false, onClose, collapsed = false, onToggleColl
       id: "feed",
       name: "Main Feed",
       icon: Layers,
-      href: "/",
+      href: "/funding",
     },
     {
       id: "grants",
       name: "Funding Grants",
       icon: DollarSign,
-      href: "/grants",
+      href: "/funding/grants",
       count: org?.activeGrantCount,
       countVariant: "emerald",
     },
@@ -51,7 +51,7 @@ export function Sidebar({ open = false, onClose, collapsed = false, onToggleColl
       id: "applications",
       name: "Application Pipeline",
       icon: Award,
-      href: `/grants/${pathname.startsWith("/grants/") && pathname.split('/')[2] ? pathname.split('/')[2] : "grant_001"}/applications`,
+      href: `/funding/grants/${pathname.startsWith("/funding/grants/") && pathname.split('/')[3] ? pathname.split('/')[3] : "grant_001"}/applications`,
       count: org?.pendingReviewCount,
       countVariant: "warning",
     },
@@ -59,7 +59,7 @@ export function Sidebar({ open = false, onClose, collapsed = false, onToggleColl
       id: "pitches",
       name: "Direct Pitches",
       icon: Sparkles,
-      href: "/direct-pitches",
+      href: "/funding/direct-pitches",
       count: org?.incomingPitchesCount,
       countVariant: "purple",
     },
@@ -67,13 +67,13 @@ export function Sidebar({ open = false, onClose, collapsed = false, onToggleColl
       id: "reviews",
       name: "Review Queue",
       icon: CheckSquare,
-      href: "/reviews",
+      href: "/funding/reviews",
     },
     {
       id: "messages",
       name: "Messages & Alerts",
       icon: MessageSquare,
-      href: "/messages",
+      href: "/funding/messages",
       count: messagesUnreadCount > 0 ? messagesUnreadCount : undefined,
       countVariant: "warning",
     },
@@ -82,17 +82,17 @@ export function Sidebar({ open = false, onClose, collapsed = false, onToggleColl
   const isActive = (item: typeof navItems[0]) => {
     switch (item.id) {
       case "feed":
-        return pathname === "/";
+        return pathname === "/funding" || pathname === "/funding/";
       case "grants":
-        return pathname === "/grants" || (pathname.startsWith("/grants/") && !pathname.includes("/applications"));
+        return pathname === "/funding/grants" || (pathname.startsWith("/funding/grants/") && !pathname.includes("/applications"));
       case "applications":
         return pathname.includes("/applications");
       case "pitches":
-        return pathname === "/direct-pitches" || pathname.startsWith("/direct-pitches/");
+        return pathname === "/funding/direct-pitches" || pathname.startsWith("/funding/direct-pitches/");
       case "reviews":
-        return pathname === "/reviews" || pathname.startsWith("/reviews/");
+        return pathname === "/funding/reviews" || pathname.startsWith("/funding/reviews/");
       case "messages":
-        return pathname === "/messages" || pathname.startsWith("/messages/");
+        return pathname === "/funding/messages" || pathname.startsWith("/funding/messages/");
       default:
         return false;
     }

@@ -177,9 +177,9 @@ export default function ReviewQueuePage() {
                       if (assignment.ownerType === "grant") {
                         // Assuming grantId is embedded in applicationId structure for mock or we just use a generic route
                         // Our mock app ID is APP-2026-0042 which belongs to grant g1
-                        router.push(`/grants/g1/applications/${assignment.applicationId}`);
+                        router.push(`/funding/grants/g1/applications/${assignment.applicationId}`);
                       } else {
-                        router.push(`/direct-pitches/${assignment.applicationId}`);
+                        router.push(`/funding/direct-pitches/${assignment.applicationId}`);
                       }
                     };
 

@@ -83,7 +83,7 @@ export default function CompanyDashboard() {
                 const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
                 
                 return (
-                  <Link href={`/company/opportunities/${job.id}`} key={job.id} className="flex items-center justify-between p-3 border border-brand-border rounded-xl hover:bg-gray-50 transition-colors cursor-pointer">
+                  <Link href={`/organization/opportunities/${job.id}`} key={job.id} className="flex items-center justify-between p-3 border border-brand-border rounded-xl hover:bg-gray-50 transition-colors cursor-pointer">
                     <div>
                       <p className="font-bold text-brand-foreground text-sm">{job.title}</p>
                       <div className="flex items-center gap-2 mt-1">

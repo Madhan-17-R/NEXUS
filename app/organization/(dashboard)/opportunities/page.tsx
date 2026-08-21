@@ -120,7 +120,7 @@ export default function OpportunitiesPage() {
           <div key={opp.id} className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow relative group">
             {/* Action buttons show on hover */}
             <div className="absolute top-5 right-5 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity bg-white pl-2 z-10">
-               <Link href={`/company/opportunities/${opp.id}/edit`} className="p-1.5 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors" title="Edit">
+               <Link href={`/organization/opportunities/${opp.id}/edit`} className="p-1.5 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors" title="Edit">
                  <Edit2 className="w-4 h-4" />
                </Link>
                <button onClick={() => handleDuplicate(opp.id)} className="p-1.5 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors" title="Duplicate">
@@ -185,13 +185,13 @@ export default function OpportunitiesPage() {
               <span className="text-[11px] text-slate-400 font-medium">Verified Employer Listing</span>
               <div className="flex gap-2">
                 <Link 
-                  href={`/company/opportunities/${opp.id}`}
+                  href={`/organization/opportunities/${opp.id}`}
                   className="bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 px-3 py-1.5 rounded-md font-medium text-xs transition-colors flex items-center gap-1.5"
                 >
                   <Eye className="w-3.5 h-3.5" /> View Role
                 </Link>
                 <Link 
-                  href={`/company/opportunities/${opp.id}/candidates`}
+                  href={`/organization/opportunities/${opp.id}/candidates`}
                   className="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-md font-medium text-xs transition-colors flex items-center gap-1.5"
                 >
                   <Users className="w-3.5 h-3.5" /> Candidates

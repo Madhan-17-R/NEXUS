@@ -158,7 +158,7 @@ export function GrantDetailPanel({ grant, onClose }: GrantDetailPanelProps) {
                 <Button 
                   variant="primary" 
                   className="w-full justify-between group" 
-                  onClick={() => router.push(`/grants/${grant.id}/applications`)}
+                  onClick={() => router.push(`/funding/grants/${grant.id}/applications`)}
                 >
                   <div className="flex items-center gap-2">
                     <Users className="w-4 h-4" />
@@ -325,7 +325,7 @@ export function GrantDetailPanel({ grant, onClose }: GrantDetailPanelProps) {
                     </p>
                   </div>
                   <div className="flex gap-2">
-                    <Button variant="primary" size="sm" leftIcon={<Layers className="w-4 h-4" />} onClick={() => router.push(`/grants/${grant.id}/form`)}>
+                    <Button variant="primary" size="sm" leftIcon={<Layers className="w-4 h-4" />} onClick={() => router.push(`/funding/grants/${grant.id}/form`)}>
                       Customize Application Form
                     </Button>
                     <Button variant="outline" size="sm">Use Template</Button>
@@ -372,8 +372,8 @@ export function GrantDetailPanel({ grant, onClose }: GrantDetailPanelProps) {
                   </Section>
 
                   <div className="flex gap-2">
-                    <Button variant="outline" size="sm" leftIcon={<Pencil className="w-3.5 h-3.5" />} onClick={() => router.push(`/grants/${grant.id}/form`)}>Edit Form</Button>
-                    <Button variant="secondary" size="sm" leftIcon={<Eye className="w-3.5 h-3.5" />} onClick={() => router.push(`/grants/${grant.id}/form`)}>Preview Form</Button>
+                    <Button variant="outline" size="sm" leftIcon={<Pencil className="w-3.5 h-3.5" />} onClick={() => router.push(`/funding/grants/${grant.id}/form`)}>Edit Form</Button>
+                    <Button variant="secondary" size="sm" leftIcon={<Eye className="w-3.5 h-3.5" />} onClick={() => router.push(`/funding/grants/${grant.id}/form`)}>Preview Form</Button>
                   </div>
 
                   <p className="text-xs text-surface-400 text-center">Full Form Builder available in Phase 3</p>
@@ -453,7 +453,7 @@ export function GrantDetailPanel({ grant, onClose }: GrantDetailPanelProps) {
             variant="primary" 
             size="sm" 
             rightIcon={<ArrowUpRight className="w-3.5 h-3.5" />}
-            onClick={() => router.push(`/grants/${grant.id}/applications`)}
+            onClick={() => router.push(`/funding/grants/${grant.id}/applications`)}
           >
             Open Full Page
           </Button>

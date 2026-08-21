@@ -16,6 +16,12 @@
   --color-emerald-primary: #10b981;
   --color-emerald-hover: #059669;
 
+  /* Organization Portal Tokens */
+  --color-brand-primary: #2563eb;
+  --color-brand-primary-hover: #1d4ed8;
+  --color-brand-mint: #eff6ff;
+  --color-brand-border: #e2e8f0;
+
   /* Funding Portal Tokens */
   --color-brand-50: #eef2ff;
   --color-brand-100: #e0e7ff;
